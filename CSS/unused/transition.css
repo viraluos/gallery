@@ -1,0 +1,37 @@
+@keyframes circle-animation-in {
+    from{
+        width: 0vw;
+    }
+}
+
+@keyframes circle-animation-out {
+    to{
+        width: 0vw;
+    }
+}
+
+.circle{
+    top: -25vh;
+    left: -25vw;
+    height: 150vh;
+    background: var(--bgColor);
+    position: absolute;
+    border-radius: 1000vw;
+    z-index: 99;
+}
+
+.circle-full{
+    width: 150vw;
+}
+
+.circle-empty{
+    width: 0vw;
+}
+
+.circle-animation-in{
+    animation: circle-animation-in 1s cubic-bezier(0.15, 0.6, 0.9, 0.1);
+}
+
+.circle-animation-out{
+    animation: circle-animation-out 1s cubic-bezier(0.15, 0.6, 0.9, 0.1);
+}

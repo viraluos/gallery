@@ -1,0 +1,85 @@
+:root{
+  --dimension: 55;
+  
+  --time: 120000s;
+  
+  overflow: hidden;
+  
+  --dots: #9880ff;
+  
+  --boxWidth: 150px;
+  
+  --bgColor: linear-gradient(45deg, #898989 0%, #e1052200 70%) repeat scroll 0% 0%, 
+  linear-gradient(135deg, #414141 10%, #3105d100 80%) repeat scroll 0% 0%, 
+  linear-gradient(225deg, #565656 0%, #0adbd800 80%) repeat scroll 0% 0%, 
+  linear-gradient(315deg, #8d8d8d 100%, #10b10e00 70%) repeat scroll 0% 0%;
+  
+  --imageWidth: 18dvw;
+  
+  --randomColor: transparent;
+}
+
+*{
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body{
+  background: var(--bgColor);
+  
+  background-repeat: no-repeat;
+  height: 100dvh;
+  margin: 0;
+}
+
+h1{
+  cursor: default;
+  font-family: 'Figtree', sans-serif;
+  font-weight: 900;
+  font-size: 5rem;
+  position: relative;
+  top: 20px;
+  z-index: 1;
+  left: 30px;
+  /* color: white; */
+  margin: 0;
+  /* width: 500px; */
+  text-shadow: 0 0 2px white;
+  /* animation: appear 1500ms ease; */
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.image-container {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-bg {
+  box-shadow: 0 0 20px black;
+
+  position: absolute;
+  width: 34%;
+  height: 100dvh;
+  top: 0;
+}
+
+.image-bg:nth-child(1){
+  left: 0;
+}
+
+.image-bg:nth-child(2){
+  left: 33%;
+}
+
+.image-bg:nth-child(3){
+  left: 66%;
+}

@@ -1,0 +1,73 @@
+.arrow { /* file per gestire la freccia quando il random view viene attivato */
+	position: relative;
+	margin: 0 auto;
+	width: 100px;
+	rotate: 60deg;
+	left: 45vw;
+	top: 3rem;
+}
+
+.arrow .curve {
+	border: 5px solid #BE5F4B;
+	border-color: transparent transparent transparent #BE5F4B;
+	height: 360px;
+	width: 1200px;
+	border-radius: 230px 0 0 150px;
+}
+
+.arrow .point {
+	position: absolute;
+	left: 40px;
+	top: 315px;
+}
+
+.arrow .point:before, .arrow .point:after {
+	border: 2px solid #BE5F4B;
+	height: 25px;
+	border-radius: 10px;
+	content: "";
+	position: absolute;
+}
+
+.arrow .point:before {
+	top: -12px;
+	left: -10px;
+	transform:rotate(-74deg);
+	-webkit-transform:rotate(-74deg);
+  -moz-transform:rotate(-74deg);
+  -ms-transform: rotate(-74deg);
+}
+
+.arrow .point:after {
+	top: -21px;
+	left: 3px;
+	transform:rotate(12deg);
+	-webkit-transform: rotate(12deg);
+	-moz-transform:rotate(12deg);
+	-ms-transform: rotate(12deg);
+}
+
+.arrow .text{ /* gestione del testo di fianco alla freccia */
+	rotate: -60deg;
+	transform: translate(95%, -380%);
+	background: -webkit-linear-gradient(45deg, #ff00ca, #0026ff, #3fff84);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: none;
+	width: 500%;
+	transition: all 500ms ease;
+
+	font-family: 'Figtree', sans-serif;
+    font-weight: 900;
+    font-size: 5rem;
+	text-shadow: 0 0 2px white;
+}	
+
+/* 
+background-size: 200%;
+background-position: left;
+
+.arrow .text{
+	background-position: right;
+}
+*/

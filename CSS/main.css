@@ -1,0 +1,139 @@
+:root{
+  --main: #e79700;
+}
+
+.div-li{
+  z-index: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  border-radius: 5px;
+  box-shadow: 5px 5px 32px black;
+  font-size: 1.5dvw;
+  list-style-type: none;
+  background-color: #37423D;
+  opacity: 0.9;
+  font-weight: bold;
+}
+
+.div-li ul{
+  display:grid;
+  justify-items: center;
+}
+
+/*.box {
+  --border-angle: 0turn;*//*
+  --main-bg: linear-gradient(to left, darkslategray, #58617a);
+  
+  border: solid 0px transparent;
+  border-radius: 8px;
+  
+  --gradient-border: conic-gradient(from var(--border-angle), #ff0, #00eeff, #ff0);
+  background: var(--main-bg) padding-box, var(--gradient-border) border-box,  var(--main-bg) border-box;
+  background-position: center center;
+  animation: 2s bg-spin linear infinite;
+}
+
+@keyframes bg-spin {
+    to {
+        --border-angle: 1turn;
+    }
+}
+
+.box:hover {
+    animation-play-state: paused;
+}*/
+
+@property --border-angle {
+    syntax: "<angle>";
+  inherits: true;
+  initial-value: 0turn;
+}
+
+.dotted-box {
+  display: none;
+
+  position: absolute;
+  background: conic-gradient(from var(--border-angle), #5f5f5f, #6767677a, #57575785, #5f5f5f);
+  width: 50%;
+  height: 80%;
+  border: 3px dotted white;
+  border-radius: 5px;
+  box-shadow: 0 0 100px black;
+  animation: 2s bg-spin linear infinite;
+  z-index: 1;
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ul-list{
+    color: white;
+  overflow: auto;
+  max-height: 800px;
+  /* margin: 0; */
+  list-style-type: none;
+  padding-left: 10px;
+}
+
+#li{
+  display: flex;
+  justify-self: center;
+}
+
+a{
+  margin: 0 auto;
+  font-size: 3rem;
+  font-weight: 900 !important;
+  color: white;
+  cursor: pointer;
+  font-family: Figtree;
+  width: fit-content;
+  transition: all 200ms cubic-bezier(0, 1, 0.35, 1);
+}
+
+a:hover{
+  font-size: 4rem;
+  color: var(--main);
+}
+
+a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  border-radius: 5px;
+  background: linear-gradient(to right, var(--main), transparent, var(--main), transparent, var(--main));
+  background-size: 200% 100%;
+  transition: width 200ms;
+  animation: 700ms underline cubic-bezier(0.5, 0.5, 0.2, 1) infinite;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+@keyframes underline{
+    from {
+        background-position-x: left;
+    }
+    to {
+      background-position-x: right;
+    }
+}
+
+::-webkit-scrollbar{ width: 0rem; }
+
+/*
+::-webkit-scrollbar-track{
+  background-color: #00000000;
+}
+
+::-webkit-scrollbar-thumb{
+  background: white;
+  border-radius: 50px;
+}
+*/

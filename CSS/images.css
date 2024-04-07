@@ -1,0 +1,77 @@
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Crea 10 colonne di larghezza uguale*/
+    grid-auto-rows: auto; /* Altezza automatica per le righe */
+    grid-gap: 10px; /* Spazio tra gli elementi */
+}
+.image-grid img{
+    object-fit: contain;
+}
+
+.image{
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+.back{
+    text-transform: capitalize;
+    color: white;
+    width: fit-content;
+    padding: 5px;
+    border-radius: 3px;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 100%;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 6vh;
+}
+.fullscreen{
+    position: fixed;
+    height: 80%;
+    width: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+body{
+    overflow: auto;
+}
+
+.blur-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(9, 9, 9, 0.5);
+    z-index: 99
+}
+
+.arrow_right{
+    display: none;
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    scale: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 10000;
+}
+
+.arrow_left{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 10px;
+    scale: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 10000;
+}

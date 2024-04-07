@@ -1,0 +1,105 @@
+@media screen and (max-width: 800px){ /* gestione del responsivness con @media screen */
+    .image-slider { justify-content: center !important; }
+    .imgEl { max-width: 400px !important; }
+    .left { right: 50px !important; }
+    .right { left: 50px !important; }
+    .btnImgs { transform: translateY(250%) !important; }
+}
+
+.image-slider{ /* container dell'immagine */
+    transform: translate(-50%, 25%);
+    left: 50%;
+    width: 650px;
+    position: relative;
+    top: 0%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.imgEl{ /* elemento img */
+    width: 650px;
+    height: 650px;
+    transition: all 400ms ease;
+    border-radius: 20px;
+    /* display: flex; */
+    /* margin: 0 auto; */
+    /* transform: translateY(-25%); */
+}
+
+.btnImgs{ /* buttons per andare avanti e indietro con le images */
+    /* top: 0; */
+    /* left: -15%; */
+    position: absolute;
+    transform: translateX(255%);
+    font-size: 5rem;
+    display: flex;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+.left{ /* button di sinistra */
+    position: relative;
+    right: var(--imageWidth);
+}
+
+.right{ /* button di destra */
+    position: relative;
+    left: var(--imageWidth);
+}
+
+.path{ /* percorso in alto  */
+    background: linear-gradient(45deg, #848484, #535353 51%, #848484, #b1b1b1) var(--x, 0)/ 200%;
+    box-shadow: -20px 20px 30px #23262e;
+    transform: translate(-21rem, 15rem);
+    border: 2px solid white;
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-family:
+    'Varela Round';
+    font-size: 3rem;
+    transition: all 500ms cubic-bezier(1, 0, 0, 1); /* cubic-bezier(1,-0.2, 0, 1) */
+}
+
+.path:hover{ --x: 100%; }
+
+.image-slider.active{
+  justify-content: center;
+  font-size: 3rem;
+  background: -webkit-linear-gradient(45deg, #0024ff, #00ffac, #ffa700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 100%;
+  background-position: left;
+  text-align: center;
+}
+
+.a-error{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  top: 60vh;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white !important;
+  background: black;
+  border-radius: 50px; 
+}
+
+/*
+.arrow{
+    width: 1.3vw !important;
+    height: 22px !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+*/
